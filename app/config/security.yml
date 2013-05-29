@@ -19,6 +19,20 @@ security:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
         
+        oauth_token:
+            pattern:    ^/oauth/v2/token
+            security:   false
+
+        oauth_authorize:
+            pattern:    ^/oauth/v2/auth
+            form_login:
+                provider: fos_userbundle
+
+        api:
+            pattern:    ^/api
+            fos_oauth:  true
+            stateless:  true
+        
         main:
             pattern: ^/
             form_login:
@@ -32,3 +46,4 @@ security:
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/api, roles: [ IS_AUTHENTICATED_FULLY ] }
