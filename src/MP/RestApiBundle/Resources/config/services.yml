@@ -1,0 +1,7 @@
+parameters:
+#    mp_rest_api.example.class: MP\RestApiBundle\Example
+
+services:
+#    mp_rest_api.example:
+#        class: %mp_rest_api.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
