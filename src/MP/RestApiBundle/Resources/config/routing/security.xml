@@ -1,0 +1,12 @@
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="mp_rest_api_auth_login" pattern="/oauth/v2/auth_login">
+        <default key="_controller">MPRestApiBundle:Security:login</default>
+    </route>
+    
+    <route id="mp_rest_api_auth_login_check" pattern="/oauth/v2/auth_login_check">
+        <default key="_controller">MPRestApiBundle:Security:loginCheck</default>
+    </route>
+</routes>

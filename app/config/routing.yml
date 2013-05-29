@@ -23,6 +23,5 @@ fos_oauth_server_token:
 fos_oauth_server_authorize:
     resource: "@FOSOAuthServerBundle/Resources/config/routing/authorize.xml"
 
-mp_rest_api:
-    resource: "@MPRestApiBundle/Resources/config/routing.yml"
-    prefix:   /
+mp_rest_api_security:
+    resource: "@MPRestApiBundle/Resources/config/routing/security.xml"

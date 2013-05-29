@@ -67,7 +67,7 @@ swiftmailer:
 # FOS User
 fos_user:
     db_driver: orm
-    firewall_name: main
+    firewall_name: oauth_authorize
     user_class: MP\RestApiBundle\Entity\User
 
 # FOS OAuth Server
