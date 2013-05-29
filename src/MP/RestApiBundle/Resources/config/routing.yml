@@ -1,3 +1,0 @@
-mp_rest_api_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: MPRestApiBundle:Default:index }
