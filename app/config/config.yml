@@ -63,3 +63,20 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+
+# FOS User
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: MP\RestApiBundle\Entity\User
+
+# FOS OAuth Server
+fos_oauth_server:
+    db_driver: orm
+    client_class:        MP\RestApiBundle\Entity\Client
+    access_token_class:  MP\RestApiBundle\Entity\AccessToken
+    refresh_token_class: MP\RestApiBundle\Entity\RefreshToken
+    auth_code_class:     MP\RestApiBundle\Entity\AuthCode
+    
+    service:
+        user_provider: fos_user.user_manager
