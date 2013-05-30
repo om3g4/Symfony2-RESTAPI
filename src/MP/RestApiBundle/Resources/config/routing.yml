@@ -1,0 +1,3 @@
+organizations:
+    type: rest
+    resource: MP\RestApiBundle\Controller\OrganizationController
