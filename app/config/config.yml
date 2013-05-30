@@ -20,6 +20,10 @@ framework:
     session:         ~
     fragments:       ~
 
+sensio_framework_extra:
+    view:
+        annotations: false
+
 # Twig Configuration
 twig:
     debug:            %kernel.debug%
@@ -80,3 +84,15 @@ fos_oauth_server:
     
     service:
         user_provider: fos_user.user_manager
+
+# FOS Rest
+fos_rest:
+    view:
+        view_response_listener: true
+        formats:
+            json: true
+            xml: true
+        templating_formats:
+            html: false
+        failed_validation: HTTP_BAD_REQUEST
+        default_engine: twig

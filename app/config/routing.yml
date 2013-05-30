@@ -1,3 +1,7 @@
+mp_rest_api:
+    resource: "@MPRestApiBundle/Resources/config/routing.yml"
+    prefix: /api
+
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
